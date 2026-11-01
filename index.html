@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KURO ANIME — Watch Anime in Direct MP4</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Cpolygon points='26,20 46,32 26,44' fill='%23ffffff'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #08090d;
+            --bg-surface: #10121a;
+            --bg-card: #151824;
+            --border: #1e2230;
+            --border-hover: #3730a3;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --accent-glow: rgba(99, 102, 241, 0.4);
+            --gold: #f59e0b;
+            --gold-glow: rgba(245, 158, 11, 0.35);
+            --green: #22c55e;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --radius-lg: 16px;
+            --radius-md: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Top Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(8, 9, 13, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .brand-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .brand-logo-icon {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, #6366f1, #4338ca);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px var(--accent-glow);
+        }
+
+        .brand-logo-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: #fff;
+        }
+
+        .brand-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            letter-spacing: 1.5px;
+            background: linear-gradient(135deg, #fff 50%, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-stats {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .badge-live {
+            background: rgba(34, 197, 94, 0.15);
+            color: #4ade80;
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 4px 10px;
+            border-radius: 6px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badge-live::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+        }
+
+        .badge-mp4 {
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .switch-manga-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            color: #cbd5e1;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .switch-manga-btn:hover {
+            background: rgba(99, 102, 241, 0.18);
+            border-color: var(--accent);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-custom-mp4 {
+            background: var(--accent);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-custom-mp4:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Theater / Player Section */
+        .theater-wrap {
+            width: 100%;
+            max-width: 1400px;
+            margin: 24px auto 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 24px;
+            align-items: start;
+            transition: all 0.3s ease;
+        }
+
+        .theater-wrap.is-theater-mode {
+            max-width: 100%;
+            grid-template-columns: 1fr;
+        }
+
+        .theater-player-column {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .video-box {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+            display: block;
+        }
+
+        .video-overlay-banner {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 10;
+            background: rgba(8, 9, 13, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            color: #cbd5e1;
+            font-weight: 700;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .video-overlay-banner span {
+            color: #4ade80;
+        }
+
+        /* Video Details Card */
+        .player-info-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .player-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .current-anime-title {
+            font-size: 1.6rem;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+
+        .current-ep-badge {
+            background: rgba(99, 102, 241, 0.18);
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: #a5b4fc;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        .player-quick-nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            color: #cbd5e1;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        .current-ep-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #cbd5e1;
+        }
+
+        .current-anime-synopsis {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Playlist / Episodes Column */
+        .playlist-column {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            height: calc(100vh - 140px);
+            max-height: 700px;
+            position: sticky;
+            top: 86px;
+        }
+
+        .playlist-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .playlist-title {
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+
+        .playlist-count {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 700;
+            background: rgba(99, 102, 241, 0.12);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .playlist-search {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.85rem;
+            color: #fff;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .playlist-search:focus {
+            border-color: var(--accent);
+        }
+
+        .episodes-list {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            padding-right: 4px;
+        }
+
+        .episodes-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .episodes-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .episodes-list::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 4px;
+        }
+
+        .ep-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 12px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .ep-item:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.08);
+            transform: translateX(2px);
+        }
+
+        .ep-item.is-active {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.16);
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+
+        .ep-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .ep-item-num {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .ep-item-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #f1f5f9;
+        }
+
+        .ep-item-meta {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge-watched {
+            color: #4ade80;
+            font-weight: 800;
+            font-size: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Library / Catalog Section */
+        .catalog-section {
+            max-width: 1400px;
+            margin: 48px auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .catalog-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .catalog-title-wrap h2 {
+            font-size: 1.6rem;
+            font-weight: 900;
+            margin-bottom: 4px;
+        }
+
+        .catalog-title-wrap p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .anime-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .anime-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+        }
+
+        .anime-card.is-current {
+            border-color: var(--accent);
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .card-poster-wrap {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/10;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .card-poster {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .anime-card:hover .card-poster {
+            transform: scale(1.04);
+        }
+
+        .card-badge-episodes {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(8, 9, 13, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+
+        .card-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            gap: 8px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            line-height: 1.25;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .card-synopsis {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 12px;
+            flex: 1;
+        }
+
+        .card-action-btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .anime-card:hover .card-action-btn {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        /* Custom MP4 Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-title {
+            font-size: 1.3rem;
+            font-weight: 900;
+        }
+
+        .modal-input {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #fff;
+            font-size: 0.9rem;
+            outline: none;
+        }
+
+        .modal-input:focus {
+            border-color: var(--accent);
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 8px;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border);
+            padding: 28px 24px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 992px) {
+            .theater-wrap {
+                grid-template-columns: 1fr;
+            }
+            .playlist-column {
+                height: 400px;
+                position: static;
+            }
+            .site-header {
+                padding: 12px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-left">
+            <a href="#" class="brand-link">
+                <div class="brand-logo-icon">
+                    <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+                </div>
+                <span class="brand-title">KURO ANIME</span>
+            </a>
+            <div class="header-stats">
+                <span class="badge-live">Anime Stream Active</span>
+                <span class="badge-mp4">Direct MP4 Only</span>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <button class="btn-custom-mp4" onclick="openCustomModal()">+ Play MP4 URL</button>
+            <a href="https://aixcard.github.io/Manga/" class="switch-manga-btn">
+                <span>📖 Switch to Kuro Manga</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Video Theater -->
+    <section class="theater-wrap" id="theaterWrap">
+        <div class="theater-player-column">
+            <div class="video-box">
+                <div class="video-overlay-banner">
+                    <span>● DIRECT MP4</span>
+                    <strong id="overlayEpLabel">Loading...</strong>
+                </div>
+                <video id="videoPlayer" controls autoplay preload="metadata">
+                    <source src="" type="video/mp4">
+                    Your browser does not support HTML5 MP4 playback.
+                </video>
+            </div>
+
+            <div class="player-info-card">
+                <div class="player-top-row">
+                    <div>
+                        <h1 class="current-anime-title" id="playerAnimeTitle">Death Note</h1>
+                        <div class="current-ep-name" id="playerEpName">Episode 1 - Rebirth</div>
+                    </div>
+                    <div class="player-quick-nav">
+                        <button class="nav-btn" id="prevEpBtn" onclick="changeEpisode(-1)">‹ Prev</button>
+                        <span class="current-ep-badge" id="playerEpBadge">EP 1</span>
+                        <button class="nav-btn" id="nextEpBtn" onclick="changeEpisode(1)">Next ›</button>
+                    </div>
+                </div>
+                <p class="current-anime-synopsis" id="playerSynopsis"></p>
+            </div>
+        </div>
+
+        <!-- Episodes Playlist -->
+        <aside class="playlist-column">
+            <div class="playlist-header">
+                <h3 class="playlist-title">All Episodes</h3>
+                <span class="playlist-count" id="playlistCount">37 Episodes</span>
+            </div>
+            <input type="text" class="playlist-search" id="epSearchInput" placeholder="Filter episode number or name..." oninput="filterEpisodes(this.value)">
+            <div class="episodes-list" id="episodesList">
+                <!-- Dynamically rendered -->
+            </div>
+        </aside>
+    </section>
+
+    <!-- Series Catalog / Switcher -->
+    <main class="catalog-section">
+        <div class="catalog-header">
+            <div class="catalog-title-wrap">
+                <h2>Anime Library</h2>
+                <p>Select any anime series to start streaming immediately in full direct MP4 format.</p>
+            </div>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+            <!-- Dynamically populated from catalog.json -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>KURO ANIME • 100% Direct MP4 Native Video Streaming • Part of the Kuro Network</p>
+    </footer>
+
+    <!-- Custom MP4 URL Modal -->
+    <div class="modal-overlay" id="customModal">
+        <div class="modal-box">
+            <h3 class="modal-title">Stream Any MP4 Video</h3>
+            <p style="font-size:0.85rem;color:var(--text-muted);">Paste any direct .mp4 video link (HTTPS) to play instantly in the Kuro Anime player.</p>
+            <input type="text" class="modal-input" id="customTitleInput" placeholder="Video Title (e.g. My Anime Episode)">
+            <input type="url" class="modal-input" id="customUrlInput" placeholder="https://example.com/video.mp4">
+            <div class="modal-actions">
+                <button class="nav-btn" onclick="closeCustomModal()">Cancel</button>
+                <button class="btn-custom-mp4" onclick="loadCustomMP4()">Play Video →</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let catalog = [];
+        let currentAnimeIndex = 0;
+        let currentEpisodeIndex = 0;
+
+        const player = document.getElementById('videoPlayer');
+
+        async function init() {
+            try {
+                const res = await fetch('catalog.json');
+                catalog = await res.json();
+                renderCatalogCards();
+
+                // Check URL hash for anime & ep
+                const hash = window.location.hash;
+                if (hash && hash.includes('/')) {
+                    const parts = hash.replace('#', '').split('/');
+                    const foundAnimeIdx = catalog.findIndex(a => a.id === parts[0]);
+                    if (foundAnimeIdx !== -1) {
+                        currentAnimeIndex = foundAnimeIdx;
+                        const epNum = parseInt(parts[1]);
+                        if (!isNaN(epNum) && epNum >= 1 && epNum <= catalog[foundAnimeIdx].episodes.length) {
+                            currentEpisodeIndex = epNum - 1;
+                        }
+                    }
+                } else {
+                    // Check saved progress
+                    const lastAnime = localStorage.getItem('kuro_last_anime');
+                    if (lastAnime) {
+                        const idx = catalog.findIndex(a => a.id === lastAnime);
+                        if (idx !== -1) currentAnimeIndex = idx;
+                    }
+                    const savedEp = localStorage.getItem(`kuro_prog_${catalog[currentAnimeIndex].id}`);
+                    if (savedEp !== null) {
+                        const epIdx = parseInt(savedEp);
+                        if (!isNaN(epIdx) && epIdx >= 0 && epIdx < catalog[currentAnimeIndex].episodes.length) {
+                            currentEpisodeIndex = epIdx;
+                        }
+                    }
+                }
+
+                loadAnime(currentAnimeIndex, currentEpisodeIndex, false);
+            } catch (err) {
+                console.error('Failed to load anime catalog:', err);
+            }
+        }
+
+        function loadAnime(animeIdx, epIdx = 0, autoPlay = true) {
+            currentAnimeIndex = animeIdx;
+            currentEpisodeIndex = epIdx;
+            const anime = catalog[animeIdx];
+            if (!anime) return;
+
+            localStorage.setItem('kuro_last_anime', anime.id);
+
+            document.getElementById('playerAnimeTitle').textContent = anime.title;
+            document.getElementById('playerSynopsis').textContent = anime.synopsis;
+            document.getElementById('playlistCount').textContent = `${anime.episodes.length} Episodes`;
+
+            renderEpisodeList(anime.episodes);
+            playEpisode(epIdx, autoPlay);
+
+            // Update active cards
+            document.querySelectorAll('.anime-card').forEach((card, idx) => {
+                if (idx === animeIdx) card.classList.add('is-current');
+                else card.classList.remove('is-current');
+            });
+        }
+
+        function playEpisode(epIdx, autoPlay = true) {
+            const anime = catalog[currentAnimeIndex];
+            if (!anime || !anime.episodes[epIdx]) return;
+
+            currentEpisodeIndex = epIdx;
+            const ep = anime.episodes[epIdx];
+
+            document.getElementById('playerEpName').textContent = `Episode ${ep.number} — ${ep.title}`;
+            document.getElementById('playerEpBadge').textContent = `EP ${ep.number}`;
+            document.getElementById('overlayEpLabel').textContent = `${anime.title} • EP ${ep.number}`;
+
+            document.getElementById('prevEpBtn').disabled = epIdx <= 0;
+            document.getElementById('nextEpBtn').disabled = epIdx >= anime.episodes.length - 1;
+
+            window.location.hash = `${anime.id}/${ep.number}`;
+
+            // Save progress
+            localStorage.setItem(`kuro_prog_${anime.id}`, epIdx);
+
+            // Update active class in list
+            document.querySelectorAll('.ep-item').forEach((item, idx) => {
+                if (idx === epIdx) item.classList.add('is-active');
+                else item.classList.remove('is-active');
+            });
+
+            // Set video source
+            player.src = ep.videoUrl;
+            player.load();
+            if (autoPlay) {
+                player.play().catch(e => console.log('Autoplay prevented by browser:', e));
+            }
+
+            // Scroll active ep into view in playlist
+            const activeElem = document.querySelector('.ep-item.is-active');
+            if (activeElem) {
+                activeElem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        function changeEpisode(delta) {
+            const nextIdx = currentEpisodeIndex + delta;
+            const anime = catalog[currentAnimeIndex];
+            if (anime && nextIdx >= 0 && nextIdx < anime.episodes.length) {
+                playEpisode(nextIdx, true);
+            }
+        }
+
+        // Auto-play next episode on end
+        player.addEventListener('ended', () => {
+            const anime = catalog[currentAnimeIndex];
+            markWatched(anime.id, currentEpisodeIndex);
+            if (anime && currentEpisodeIndex < anime.episodes.length - 1) {
+                playEpisode(currentEpisodeIndex + 1, true);
+            }
+        });
+
+        function getWatchedSet(animeId) {
+            try {
+                return new Set(JSON.parse(localStorage.getItem(`kuro_watched_${animeId}`) || '[]'));
+            } catch (e) {
+                return new Set();
+            }
+        }
+
+        function markWatched(animeId, epIdx) {
+            const set = getWatchedSet(animeId);
+            set.add(epIdx);
+            localStorage.setItem(`kuro_watched_${animeId}`, JSON.stringify([...set]));
+            renderEpisodeList(catalog[currentAnimeIndex].episodes);
+        }
+
+        function renderEpisodeList(episodes) {
+            const list = document.getElementById('episodesList');
+            list.innerHTML = '';
+            const anime = catalog[currentAnimeIndex];
+            const watchedSet = getWatchedSet(anime.id);
+
+            episodes.forEach((ep, idx) => {
+                const item = document.createElement('div');
+                item.className = 'ep-item' + (idx === currentEpisodeIndex ? ' is-active' : '');
+                item.onclick = () => playEpisode(idx, true);
+
+                const isWatched = watchedSet.has(idx);
+
+                item.innerHTML = `
+                    <div class="ep-item-info">
+                        <span class="ep-item-num">Episode ${ep.number}</span>
+                        <div class="ep-item-title">${ep.title}</div>
+                        <div class="ep-item-meta">
+                            <span>⏱ ${ep.duration}</span>
+                            ${isWatched ? '<span class="badge-watched">✓ Watched</span>' : ''}
+                        </div>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        function filterEpisodes(query) {
+            const q = query.trim().toLowerCase();
+            const anime = catalog[currentAnimeIndex];
+            if (!anime) return;
+            const filtered = anime.episodes.filter(ep => 
+                String(ep.number).includes(q) || ep.title.toLowerCase().includes(q)
+            );
+            renderEpisodeList(filtered);
+        }
+
+        function renderCatalogCards() {
+            const grid = document.getElementById('catalogGrid');
+            grid.innerHTML = '';
+            catalog.forEach((anime, idx) => {
+                const card = document.createElement('div');
+                card.className = 'anime-card' + (idx === currentAnimeIndex ? ' is-current' : '');
+                card.onclick = () => {
+                    loadAnime(idx, 0, true);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+
+                card.innerHTML = `
+                    <div class="card-poster-wrap">
+                        <img src="${anime.coverImage}" alt="${anime.title}" class="card-poster">
+                        <span class="card-badge-episodes">${anime.totalEpisodes} Episodes (MP4)</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">${anime.title}</h3>
+                        <div class="card-meta">
+                            <span>★ ${anime.rating}</span>
+                            <span>•</span>
+                            <span>${anime.year}</span>
+                            <span>•</span>
+                            <span>${anime.genre[0] || 'Anime'}</span>
+                        </div>
+                        <p class="card-synopsis">${anime.synopsis}</p>
+                        <div class="card-action-btn">Stream in MP4 →</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Custom MP4 modal handlers
+        function openCustomModal() {
+            document.getElementById('customModal').classList.add('active');
+        }
+        function closeCustomModal() {
+            document.getElementById('customModal').classList.remove('active');
+        }
+        function loadCustomMP4() {
+            const url = document.getElementById('customUrlInput').value.trim();
+            const title = document.getElementById('customTitleInput').value.trim() || 'Custom MP4 Video';
+            if (!url) return;
+
+            document.getElementById('playerAnimeTitle').textContent = 'Custom Video Stream';
+            document.getElementById('playerEpName').textContent = title;
+            document.getElementById('playerEpBadge').textContent = 'MP4';
+            document.getElementById('overlayEpLabel').textContent = title;
+
+            player.src = url;
+            player.load();
+            player.play();
+
+            closeCustomModal();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Keyboard shortcuts
+        window.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT') return;
+            if (e.code === 'Space') {
+                e.preventDefault();
+                player.paused ? player.play() : player.pause();
+            } else if (e.code === 'ArrowRight' || e.code === 'KeyL') {
+                player.currentTime += 10;
+            } else if (e.code === 'ArrowLeft' || e.code === 'KeyJ') {
+                player.currentTime -= 10;
+            } else if (e.code === 'KeyF') {
+                if (document.fullscreenElement) document.exitFullscreen();
+                else player.requestFullscreen();
+            }
+        });
+
+        init();
+    </script>
+</body>
+</html>
