@@ -1,0 +1,918 @@
+[
+  {
+    "id": "death-note",
+    "title": "Death Note",
+    "japaneseTitle": "\u30c7\u30b9\u30ce\u30fc\u30c8 (Desu N\u014dto)",
+    "year": "2006",
+    "rating": "9.0 / 10",
+    "genre": [
+      "Psychological",
+      "Supernatural",
+      "Thriller",
+      "Mystery"
+    ],
+    "status": "Completed",
+    "totalEpisodes": 37,
+    "coverImage": "https://raw.githubusercontent.com/AIxcard/death-note/main/cover.jpg",
+    "bannerImage": "https://images.alphacoders.com/131/131802.jpg",
+    "synopsis": "Light Yagami is a brilliant high school student who discovers the 'Death Note', a notebook dropped by the Shinigami Ryuk. Any person whose name is written in it dies. Light decides to rid the world of criminals under the moniker Kira, triggering an intellectual cat-and-mouse game against the eccentric master detective L.",
+    "episodes": [
+      {
+        "number": 1,
+        "title": "Rebirth",
+        "filename": "E01 - Rebirth.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E01%20-%20Rebirth.mp4"
+      },
+      {
+        "number": 2,
+        "title": "Confrontation",
+        "filename": "E02 - Confrontation.mp4",
+        "duration": "22:56",
+        "durationSeconds": 1376,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E02%20-%20Confrontation.mp4"
+      },
+      {
+        "number": 3,
+        "title": "Dealings",
+        "filename": "E03 - Dealings.mp4",
+        "duration": "22:58",
+        "durationSeconds": 1378,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E03%20-%20Dealings.mp4"
+      },
+      {
+        "number": 4,
+        "title": "Pursuit",
+        "filename": "E04 - Pursuit.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E04%20-%20Pursuit.mp4"
+      },
+      {
+        "number": 5,
+        "title": "Tactics",
+        "filename": "E05 - Tactics.mp4",
+        "duration": "22:58",
+        "durationSeconds": 1378,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E05%20-%20Tactics.mp4"
+      },
+      {
+        "number": 6,
+        "title": "Unraveling",
+        "filename": "E06 - Unraveling.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E06%20-%20Unraveling.mp4"
+      },
+      {
+        "number": 7,
+        "title": "Overcast",
+        "filename": "E07 - Overcast.mp4",
+        "duration": "22:58",
+        "durationSeconds": 1378,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E07%20-%20Overcast.mp4"
+      },
+      {
+        "number": 8,
+        "title": "Glare",
+        "filename": "E08 - Glare.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E08%20-%20Glare.mp4"
+      },
+      {
+        "number": 9,
+        "title": "Encounter",
+        "filename": "E09 - Encounter.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E09%20-%20Encounter.mp4"
+      },
+      {
+        "number": 10,
+        "title": "Doubt",
+        "filename": "E10 - Doubt.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E10%20-%20Doubt.mp4"
+      },
+      {
+        "number": 11,
+        "title": "Assault",
+        "filename": "E11 - Assault.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E11%20-%20Assault.mp4"
+      },
+      {
+        "number": 12,
+        "title": "Love",
+        "filename": "E12 - Love.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E12%20-%20Love.mp4"
+      },
+      {
+        "number": 13,
+        "title": "Confession",
+        "filename": "E13 - Confession.mp4",
+        "duration": "23:00",
+        "durationSeconds": 1380,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E13%20-%20Confession.mp4"
+      },
+      {
+        "number": 14,
+        "title": "Friend",
+        "filename": "E14 - Friend.mp4",
+        "duration": "23:00",
+        "durationSeconds": 1380,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E14%20-%20Friend.mp4"
+      },
+      {
+        "number": 15,
+        "title": "Wager",
+        "filename": "E15 - Wager.mp4",
+        "duration": "22:56",
+        "durationSeconds": 1376,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E15%20-%20Wager.mp4"
+      },
+      {
+        "number": 16,
+        "title": "Decision",
+        "filename": "E16 - Decision.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E16%20-%20Decision.mp4"
+      },
+      {
+        "number": 17,
+        "title": "Execution",
+        "filename": "E17 - Execution.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E17%20-%20Execution.mp4"
+      },
+      {
+        "number": 18,
+        "title": "Ally",
+        "filename": "E18 - Ally.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E18%20-%20Ally.mp4"
+      },
+      {
+        "number": 19,
+        "title": "Matsuda",
+        "filename": "E19 - Matsuda.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E19%20-%20Matsuda.mp4"
+      },
+      {
+        "number": 20,
+        "title": "Makeshift",
+        "filename": "E20 - Makeshift.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E20%20-%20Makeshift.mp4"
+      },
+      {
+        "number": 21,
+        "title": "Performance",
+        "filename": "E21 - Performance.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E21%20-%20Performance.mp4"
+      },
+      {
+        "number": 22,
+        "title": "Guidance",
+        "filename": "E22 - Guidance.mp4",
+        "duration": "22:55",
+        "durationSeconds": 1375,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E22%20-%20Guidance.mp4"
+      },
+      {
+        "number": 23,
+        "title": "Frenzy",
+        "filename": "E23 - Frenzy.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E23%20-%20Frenzy.mp4"
+      },
+      {
+        "number": 24,
+        "title": "Revival",
+        "filename": "E24 - Revival.mp4",
+        "duration": "23:00",
+        "durationSeconds": 1380,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E24%20-%20Revival.mp4"
+      },
+      {
+        "number": 25,
+        "title": "Silence",
+        "filename": "E25 - Silence.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E25%20-%20Silence.mp4"
+      },
+      {
+        "number": 26,
+        "title": "Renewal",
+        "filename": "E26 - Renewal.mp4",
+        "duration": "22:56",
+        "durationSeconds": 1376,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E26%20-%20Renewal.mp4"
+      },
+      {
+        "number": 27,
+        "title": "Abduction",
+        "filename": "E27 - Abduction.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E27%20-%20Abduction.mp4"
+      },
+      {
+        "number": 28,
+        "title": "Impatience",
+        "filename": "E28 - Impatience.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E28%20-%20Impatience.mp4"
+      },
+      {
+        "number": 29,
+        "title": "Father",
+        "filename": "E29 - Father.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E29%20-%20Father.mp4"
+      },
+      {
+        "number": 30,
+        "title": "Justice",
+        "filename": "E30 - Justice.mp4",
+        "duration": "22:59",
+        "durationSeconds": 1379,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E30%20-%20Justice.mp4"
+      },
+      {
+        "number": 31,
+        "title": "Transfer",
+        "filename": "E31 - Transfer.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E31%20-%20Transfer.mp4"
+      },
+      {
+        "number": 32,
+        "title": "Selection",
+        "filename": "E32 - Selection.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E32%20-%20Selection.mp4"
+      },
+      {
+        "number": 33,
+        "title": "Scorn",
+        "filename": "E33 - Scorn.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E33%20-%20Scorn.mp4"
+      },
+      {
+        "number": 34,
+        "title": "Vigilance",
+        "filename": "E34 - Vigilance.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E34%20-%20Vigilance.mp4"
+      },
+      {
+        "number": 35,
+        "title": "Malice",
+        "filename": "E35 - Malice.mp4",
+        "duration": "22:58",
+        "durationSeconds": 1378,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E35%20-%20Malice.mp4"
+      },
+      {
+        "number": 36,
+        "title": "1.28",
+        "filename": "E36 - 1.28.mp4",
+        "duration": "22:57",
+        "durationSeconds": 1377,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E36%20-%201.28.mp4"
+      },
+      {
+        "number": 37,
+        "title": "New World",
+        "filename": "E37 - New World.mp4",
+        "duration": "22:35",
+        "durationSeconds": 1355,
+        "videoUrl": "https://archive.org/download/death-note-complete-2006-2007/E37%20-%20New%20World.mp4"
+      }
+    ]
+  },
+  {
+    "id": "naruto",
+    "title": "Naruto",
+    "japaneseTitle": "NARUTO -\u30ca\u30eb\u30c8-",
+    "year": "2002",
+    "rating": "8.4 / 10",
+    "genre": [
+      "Action",
+      "Adventure",
+      "Shounen",
+      "Ninja"
+    ],
+    "status": "Completed",
+    "totalEpisodes": 50,
+    "coverImage": "https://raw.githubusercontent.com/AIxcard/naruto/main/cover.jpg",
+    "bannerImage": "https://images.alphacoders.com/712/71239.jpg",
+    "synopsis": "Naruto Uzumaki, an ostracized orphan boy bearing the seal of the Nine-Tailed Fox demon within him, fights to gain the respect of the Hidden Leaf Village and fulfills his vow to become the greatest Hokage.",
+    "episodes": [
+      {
+        "number": 1,
+        "title": "Episode 1",
+        "filename": "Naruto - 001.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20001.mp4"
+      },
+      {
+        "number": 2,
+        "title": "Episode 2",
+        "filename": "Naruto - 002.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20002.mp4"
+      },
+      {
+        "number": 3,
+        "title": "Episode 3",
+        "filename": "Naruto - 003.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20003.mp4"
+      },
+      {
+        "number": 4,
+        "title": "Episode 4",
+        "filename": "Naruto - 004.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20004.mp4"
+      },
+      {
+        "number": 5,
+        "title": "Episode 5",
+        "filename": "Naruto - 005.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20005.mp4"
+      },
+      {
+        "number": 6,
+        "title": "Episode 6",
+        "filename": "Naruto - 006.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20006.mp4"
+      },
+      {
+        "number": 7,
+        "title": "Episode 7",
+        "filename": "Naruto - 007.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20007.mp4"
+      },
+      {
+        "number": 8,
+        "title": "Episode 8",
+        "filename": "Naruto - 008.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20008.mp4"
+      },
+      {
+        "number": 9,
+        "title": "Episode 9",
+        "filename": "Naruto - 009.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20009.mp4"
+      },
+      {
+        "number": 10,
+        "title": "Episode 10",
+        "filename": "Naruto - 010.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20010.mp4"
+      },
+      {
+        "number": 11,
+        "title": "Episode 11",
+        "filename": "Naruto - 011.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20011.mp4"
+      },
+      {
+        "number": 12,
+        "title": "Episode 12",
+        "filename": "Naruto - 012.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20012.mp4"
+      },
+      {
+        "number": 13,
+        "title": "Episode 13",
+        "filename": "Naruto - 013.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20013.mp4"
+      },
+      {
+        "number": 14,
+        "title": "Episode 14",
+        "filename": "Naruto - 014.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20014.mp4"
+      },
+      {
+        "number": 15,
+        "title": "Episode 15",
+        "filename": "Naruto - 015.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20015.mp4"
+      },
+      {
+        "number": 16,
+        "title": "Episode 16",
+        "filename": "Naruto - 016.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20016.mp4"
+      },
+      {
+        "number": 17,
+        "title": "Episode 17",
+        "filename": "Naruto - 017.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20017.mp4"
+      },
+      {
+        "number": 18,
+        "title": "Episode 18",
+        "filename": "Naruto - 018.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20018.mp4"
+      },
+      {
+        "number": 19,
+        "title": "Episode 19",
+        "filename": "Naruto - 019.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20019.mp4"
+      },
+      {
+        "number": 20,
+        "title": "Episode 20",
+        "filename": "Naruto - 020.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20020.mp4"
+      },
+      {
+        "number": 21,
+        "title": "Episode 21",
+        "filename": "Naruto - 021.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20021.mp4"
+      },
+      {
+        "number": 22,
+        "title": "Episode 22",
+        "filename": "Naruto - 022.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20022.mp4"
+      },
+      {
+        "number": 23,
+        "title": "Episode 23",
+        "filename": "Naruto - 023.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20023.mp4"
+      },
+      {
+        "number": 24,
+        "title": "Episode 24",
+        "filename": "Naruto - 024.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20024.mp4"
+      },
+      {
+        "number": 25,
+        "title": "Episode 25",
+        "filename": "Naruto - 025.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20025.mp4"
+      },
+      {
+        "number": 26,
+        "title": "Episode 26",
+        "filename": "Naruto - 026 (Relleno).mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20026%20%28Relleno%29.mp4"
+      },
+      {
+        "number": 27,
+        "title": "Episode 27",
+        "filename": "Naruto - 027.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20027.mp4"
+      },
+      {
+        "number": 28,
+        "title": "Episode 28",
+        "filename": "Naruto - 028.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20028.mp4"
+      },
+      {
+        "number": 29,
+        "title": "Episode 29",
+        "filename": "Naruto - 029.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20029.mp4"
+      },
+      {
+        "number": 30,
+        "title": "Episode 30",
+        "filename": "Naruto - 030.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20030.mp4"
+      },
+      {
+        "number": 31,
+        "title": "Episode 31",
+        "filename": "Naruto - 031.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20031.mp4"
+      },
+      {
+        "number": 32,
+        "title": "Episode 32",
+        "filename": "Naruto - 032.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20032.mp4"
+      },
+      {
+        "number": 33,
+        "title": "Episode 33",
+        "filename": "Naruto - 033.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20033.mp4"
+      },
+      {
+        "number": 34,
+        "title": "Episode 34",
+        "filename": "Naruto - 034.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20034.mp4"
+      },
+      {
+        "number": 35,
+        "title": "Episode 35",
+        "filename": "Naruto - 035.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20035.mp4"
+      },
+      {
+        "number": 36,
+        "title": "Episode 36",
+        "filename": "Naruto - 036.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20036.mp4"
+      },
+      {
+        "number": 37,
+        "title": "Episode 37",
+        "filename": "Naruto - 037.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20037.mp4"
+      },
+      {
+        "number": 38,
+        "title": "Episode 38",
+        "filename": "Naruto - 038.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20038.mp4"
+      },
+      {
+        "number": 39,
+        "title": "Episode 39",
+        "filename": "Naruto - 039.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20039.mp4"
+      },
+      {
+        "number": 40,
+        "title": "Episode 40",
+        "filename": "Naruto - 040.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20040.mp4"
+      },
+      {
+        "number": 41,
+        "title": "Episode 41",
+        "filename": "Naruto - 041.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20041.mp4"
+      },
+      {
+        "number": 42,
+        "title": "Episode 42",
+        "filename": "Naruto - 042.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20042.mp4"
+      },
+      {
+        "number": 43,
+        "title": "Episode 43",
+        "filename": "Naruto - 043.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20043.mp4"
+      },
+      {
+        "number": 44,
+        "title": "Episode 44",
+        "filename": "Naruto - 044.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20044.mp4"
+      },
+      {
+        "number": 45,
+        "title": "Episode 45",
+        "filename": "Naruto - 045.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20045.mp4"
+      },
+      {
+        "number": 46,
+        "title": "Episode 46",
+        "filename": "Naruto - 046.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20046.mp4"
+      },
+      {
+        "number": 47,
+        "title": "Episode 47",
+        "filename": "Naruto - 047.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20047.mp4"
+      },
+      {
+        "number": 48,
+        "title": "Episode 48",
+        "filename": "Naruto - 048.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20048.mp4"
+      },
+      {
+        "number": 49,
+        "title": "Episode 49",
+        "filename": "Naruto - 049.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20049.mp4"
+      },
+      {
+        "number": 50,
+        "title": "Episode 50",
+        "filename": "Naruto - 050.mp4",
+        "duration": "23:05",
+        "durationSeconds": 1385,
+        "videoUrl": "https://archive.org/download/naruto-completo/Naruto%20-%20050.mp4"
+      }
+    ]
+  },
+  {
+    "id": "bleach",
+    "title": "Bleach",
+    "japaneseTitle": "BLEACH -\u30d6\u30ea\u30fc\u30c1-",
+    "year": "2004",
+    "rating": "8.2 / 10",
+    "genre": [
+      "Action",
+      "Supernatural",
+      "Shounen",
+      "Swords"
+    ],
+    "status": "Completed",
+    "totalEpisodes": 20,
+    "coverImage": "https://raw.githubusercontent.com/AIxcard/bleach/main/cover.jpg",
+    "bannerImage": "https://images.alphacoders.com/287/28731.jpg",
+    "synopsis": "High school student Ichigo Kurosaki possesses the rare ability to see spirits. When his family is attacked by a Hollow, he accepts the powers of Soul Reaper Rukia Kuchiki and embarks on a quest to defend the living world and the Soul Society.",
+    "episodes": [
+      {
+        "number": 1,
+        "title": "Episode 1",
+        "filename": "Bleach  001.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20001.mp4"
+      },
+      {
+        "number": 2,
+        "title": "Episode 2",
+        "filename": "Bleach  002.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20002.mp4"
+      },
+      {
+        "number": 3,
+        "title": "Episode 3",
+        "filename": "Bleach  003.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20003.mp4"
+      },
+      {
+        "number": 4,
+        "title": "Episode 4",
+        "filename": "Bleach  004.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20004.mp4"
+      },
+      {
+        "number": 5,
+        "title": "Episode 5",
+        "filename": "Bleach  005.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20005.mp4"
+      },
+      {
+        "number": 6,
+        "title": "Episode 6",
+        "filename": "Bleach  006.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20006.mp4"
+      },
+      {
+        "number": 7,
+        "title": "Episode 7",
+        "filename": "Bleach  007.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20007.mp4"
+      },
+      {
+        "number": 8,
+        "title": "Episode 8",
+        "filename": "Bleach  008.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20008.mp4"
+      },
+      {
+        "number": 9,
+        "title": "Episode 9",
+        "filename": "Bleach  009.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20009.mp4"
+      },
+      {
+        "number": 10,
+        "title": "Episode 10",
+        "filename": "Bleach  010.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20010.mp4"
+      },
+      {
+        "number": 11,
+        "title": "Episode 11",
+        "filename": "Bleach  011.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20011.mp4"
+      },
+      {
+        "number": 12,
+        "title": "Episode 12",
+        "filename": "Bleach  012.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20012.mp4"
+      },
+      {
+        "number": 13,
+        "title": "Episode 13",
+        "filename": "Bleach  013.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20013.mp4"
+      },
+      {
+        "number": 14,
+        "title": "Episode 14",
+        "filename": "Bleach  014.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20014.mp4"
+      },
+      {
+        "number": 15,
+        "title": "Episode 15",
+        "filename": "Bleach  015.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20015.mp4"
+      },
+      {
+        "number": 16,
+        "title": "Episode 16",
+        "filename": "Bleach  016.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20016.mp4"
+      },
+      {
+        "number": 17,
+        "title": "Episode 17",
+        "filename": "Bleach  017.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20017.mp4"
+      },
+      {
+        "number": 18,
+        "title": "Episode 18",
+        "filename": "Bleach  018.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20018.mp4"
+      },
+      {
+        "number": 19,
+        "title": "Episode 19",
+        "filename": "Bleach  019.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20019.mp4"
+      },
+      {
+        "number": 20,
+        "title": "Episode 20",
+        "filename": "Bleach  020.mp4",
+        "duration": "22:50",
+        "durationSeconds": 1370,
+        "videoUrl": "https://archive.org/download/bleach-temporada-1/Bleach%20%20020.mp4"
+      }
+    ]
+  }
+]
