@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KURO ANIME — Watch Anime in Direct MP4</title>
+    <title>KURO ANIME - Watch Anime in Direct MP4</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366f1'/%3E%3Cpolygon points='26,20 46,32 26,44' fill='%23ffffff'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -806,7 +806,7 @@
 
         async function init() {
             try {
-                const res = await fetch('catalog.json');
+                const res = await fetch('catalog.json?v=' + Date.now());
                 catalog = await res.json();
                 renderCatalogCards();
 
@@ -873,7 +873,7 @@
             currentEpisodeIndex = epIdx;
             const ep = anime.episodes[epIdx];
 
-            document.getElementById('playerEpName').textContent = `Episode ${ep.number} — ${ep.title}`;
+            document.getElementById('playerEpName').textContent = `Episode ${ep.number} - ${ep.title}`;
             document.getElementById('playerEpBadge').textContent = `EP ${ep.number}`;
             document.getElementById('overlayEpLabel').textContent = `${anime.title} • EP ${ep.number}`;
 
