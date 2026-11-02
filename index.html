@@ -210,23 +210,7 @@
             background: rgba(255, 255, 255, 0.09);
         }
 
-        .btn-custom-mp4 {
-            background: rgba(99, 102, 241, 0.15);
-            border: 1px solid rgba(99, 102, 241, 0.35);
-            color: #c7d2fe;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition);
-        }
 
-        .btn-custom-mp4:hover {
-            background: var(--accent);
-            color: #fff;
-            box-shadow: 0 4px 16px var(--accent-glow);
-        }
 
         .switch-manga-btn {
             display: inline-flex;
@@ -1213,7 +1197,7 @@
             </a>
             <div class="header-badges">
                 <span class="badge-live">Live Stream</span>
-                <span class="badge-mp4">Direct MP4</span>
+                <span class="badge-mp4">HD 1080p</span>
             </div>
         </div>
 
@@ -1224,7 +1208,6 @@
 
         <div class="header-right">
             <button class="btn-shortcut-hint" onclick="openShortcutsModal()">⌨️ Shortcuts</button>
-            <button class="btn-custom-mp4" onclick="openCustomModal()">+ Play MP4</button>
             <a href="https://aixcard.github.io/Manga/" class="switch-manga-btn">
                 <span>📖 Switch to Kuro Manga</span>
             </a>
@@ -1256,7 +1239,7 @@
             <!-- Video Box -->
             <div class="video-box" id="videoBox">
                 <div class="video-overlay-banner" id="videoOverlay">
-                    <span>● DIRECT MP4</span>
+                    <span>● KURO STREAM</span>
                     <strong id="overlayEpLabel">Loading...</strong>
                 </div>
                 <div class="resume-toast" id="resumeToast">
@@ -1366,7 +1349,7 @@
         <div class="catalog-header">
             <div class="catalog-title-wrap">
                 <h2>Anime Library</h2>
-                <p>Select any anime series to start streaming immediately in full direct MP4 format with Sub & Dub.</p>
+                <p>Select any anime series to start streaming immediately in full HD with English Sub & English Dub.</p>
             </div>
             <!-- Genre Chips -->
             <div class="genre-chips-wrap" id="genreChips">
@@ -1386,7 +1369,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <p>KURO ANIME • 100% Direct MP4 Native Video Streaming • English Sub & English Dub • Part of the Kuro Network</p>
+        <p>KURO ANIME • High-Definition Anime Streaming • English Sub & English Dub • Part of the Kuro Network</p>
     </footer>
 
     <!-- Keyboard Shortcuts Modal -->
@@ -1433,22 +1416,7 @@
         </div>
     </div>
 
-    <!-- Custom MP4 Modal -->
-    <div class="modal-overlay" id="customModal">
-        <div class="modal-box">
-            <div class="modal-title">
-                <span>Stream Any MP4 Video</span>
-                <button class="modal-close-btn" onclick="closeCustomModal()">&times;</button>
-            </div>
-            <p style="font-size:0.85rem;color:var(--text-muted);">Paste any direct .mp4 video link (HTTPS) to play instantly with our custom player controls.</p>
-            <input type="text" class="modal-input" id="customTitleInput" placeholder="Video Title (e.g. My Anime Episode)">
-            <input type="url" class="modal-input" id="customUrlInput" placeholder="https://example.com/video.mp4">
-            <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:8px;">
-                <button class="nav-btn" onclick="closeCustomModal()">Cancel</button>
-                <button class="btn-custom-mp4" onclick="loadCustomMP4()">Play Video →</button>
-            </div>
-        </div>
-    </div>
+
 
     <script>
         let catalog = [];
@@ -1629,8 +1597,7 @@
             const ep = anime.episodes[currentEpisodeIndex];
             if (!ep) return;
 
-            let nextUrl = (mode === 'dub' && ep.dub) ? ep.dub : (ep.sub || ep.videoUrl);
-            if (mode === 'sub' && ep.sub) nextUrl = ep.sub;
+            let nextUrl = (mode === 'sub') ? (ep.sub || ep.videoUrl || ep.dub) : (ep.dub || ep.videoUrl || ep.sub);
 
             player.src = nextUrl;
             player.load();
@@ -1640,6 +1607,7 @@
             }
 
             document.getElementById('overlayEpLabel').textContent = `${anime.title} • EP ${ep.number} (${audioMode.toUpperCase()})`;
+            showToast(mode === 'sub' ? '🇯🇵 Japanese Audio • English Sub' : '🇺🇸 English Voice Dub');
         }
 
         function updateAudioToggleUI() {
@@ -1829,12 +1797,16 @@
             }
         }
 
-        function showResumeToast() {
+        function showToast(msg) {
             const toast = document.getElementById('resumeToast');
+            if (msg) toast.innerHTML = `<span>${msg}</span>`;
             toast.style.display = 'flex';
             setTimeout(() => {
                 toast.style.display = 'none';
-            }, 3500);
+            }, 3000);
+        }
+        function showResumeToast() {
+            showToast('⏱ Resumed from saved position');
         }
 
         // Time tracking & Auto Next
@@ -1900,7 +1872,7 @@
                             <span>${anime.genre[0] || 'Anime'}</span>
                         </div>
                         <p class="card-synopsis">${anime.synopsis}</p>
-                        <div class="card-action-btn">Stream in MP4 →</div>
+                        <div class="card-action-btn">Watch Now →</div>
                     </div>
                 `;
                 grid.appendChild(card);
@@ -1941,30 +1913,7 @@
             document.getElementById('shortcutsModal').classList.remove('active');
         }
 
-        function openCustomModal() {
-            document.getElementById('customModal').classList.add('active');
-        }
-        function closeCustomModal() {
-            document.getElementById('customModal').classList.remove('active');
-        }
 
-        function loadCustomMP4() {
-            const url = document.getElementById('customUrlInput').value.trim();
-            const title = document.getElementById('customTitleInput').value.trim() || 'Custom MP4 Video';
-            if (!url) return;
-
-            document.getElementById('playerAnimeTitle').textContent = 'Custom Video Stream';
-            document.getElementById('playerEpName').textContent = title;
-            document.getElementById('playerEpBadge').textContent = 'MP4';
-            document.getElementById('overlayEpLabel').textContent = title;
-
-            player.src = url;
-            player.load();
-            player.play();
-
-            closeCustomModal();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
 
         // Global Keyboard Shortcuts
         window.addEventListener('keydown', (e) => {
